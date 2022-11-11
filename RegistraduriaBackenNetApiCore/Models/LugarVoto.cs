@@ -13,5 +13,6 @@ namespace RegistraduriaBackenNetApiCore.Models
         public string? direccionLugarVoto { get; set; }
         public string? codCiudad { get; set; }
         public Ciudad? ciudad { get; set; }
+        public ICollection<Mesa>? Mesas { get; set; }
     }
 }

@@ -26,6 +26,21 @@ namespace RegistraduriaBackenNetApiCore.DataBaseContext
                        .HasOne(p => p.ciudad)
                        .WithMany(c => c.Lugares)
                        .HasForeignKey(p => p.codCiudad);
+
+            modelBuilder.Entity<Mesa>()
+                       .HasOne(p => p.lugarVoto)
+                       .WithMany(c => c.Mesas)
+                       .HasForeignKey(p => p.codLugarVoto);
+
+            modelBuilder.Entity<Persona>()
+                       .HasOne(p => p.mesa)
+                       .WithMany(c => c.Personas)
+                       .HasForeignKey(p => p.codMesa);
+
+            modelBuilder.Entity<Registro>()
+                       .HasOne(p => p.persona)
+                       .WithMany(c => c.Registros)
+                       .HasForeignKey(p => p.cedula);
         }
 
     }

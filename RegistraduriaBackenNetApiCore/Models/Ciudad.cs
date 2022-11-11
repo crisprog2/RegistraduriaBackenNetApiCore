@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using RegistraduriaBackenNetApiCore.Models;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Registraduria_Backend_Api.Models
@@ -11,5 +12,6 @@ namespace Registraduria_Backend_Api.Models
         public string? ciudad { get; set; }
         public string? codDepartamento { get; set; }
         public Departamento? departamento { get; set; }
+        public ICollection<LugarVoto>? Lugares { get; set; }
     }
 }

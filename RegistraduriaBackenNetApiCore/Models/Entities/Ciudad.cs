@@ -1,8 +1,7 @@
-﻿using RegistraduriaBackenNetApiCore.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Registraduria_Backend_Api.Models
+namespace RegistraduriaBackenNetApiCore.Models.Entities
 {
     [Table("Ciudades")]
     public class Ciudad

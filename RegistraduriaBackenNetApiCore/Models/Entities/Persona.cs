@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RegistraduriaBackenNetApiCore.Models
+namespace RegistraduriaBackenNetApiCore.Models.Entities
 {
     [Table("Personas")]
     public class Persona

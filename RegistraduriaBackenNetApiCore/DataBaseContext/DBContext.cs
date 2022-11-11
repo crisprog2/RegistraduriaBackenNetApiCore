@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Registraduria_Backend_Api.Models;
-using RegistraduriaBackenNetApiCore.Models;
+using RegistraduriaBackenNetApiCore.Models.Entities;
 
 namespace RegistraduriaBackenNetApiCore.DataBaseContext
 {
@@ -14,6 +13,10 @@ namespace RegistraduriaBackenNetApiCore.DataBaseContext
         public DbSet<Departamento> Departamentos { get; set; }
         public DbSet<Ciudad> Ciudades { get; set; }
         public DbSet<LugarVoto> LugarVotaciones { get; set; }
+        public DbSet<Mesa> Mesas { get; set; }
+        public DbSet<Persona> Personas { get; set; }
+        public DbSet<Registro> Registros { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -42,6 +45,12 @@ namespace RegistraduriaBackenNetApiCore.DataBaseContext
                        .WithMany(c => c.Registros)
                        .HasForeignKey(p => p.cedula);
         }
+
+        public DbSet<Mesa> Mesa { get; set; }
+
+        public DbSet<Persona> Persona { get; set; }
+
+        public DbSet<Registro> Registro { get; set; }
 
     }
 }

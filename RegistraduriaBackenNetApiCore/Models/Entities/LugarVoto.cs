@@ -1,8 +1,7 @@
-﻿using Registraduria_Backend_Api.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace RegistraduriaBackenNetApiCore.Models
+namespace RegistraduriaBackenNetApiCore.Models.Entities
 {
     [Table("LugarVotaciones")]
     public class LugarVoto
